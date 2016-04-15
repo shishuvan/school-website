@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo 9</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="9/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="5/ninjaVideoPlugin.js"></script>
+    <script src="9/ninja-slider.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //don't copy the script below into your page.
+        if (!document.domain) alert("The video will not work properly if opening the page by local path. Please test this page through HTTP on a web or localhost server");
+    </script>
+    <style>
+        body {font: normal 0.9em Arial;margin:0;}
+        a {color:#1155CC;}
+        h2 {margin-top: 60px;}
+        header {display:block;padding:40px 0 30px;text-align:center;background:#000;}
+        header a {
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 8px 13px 7px;
+            color: #4d5256;
+            text-decoration:none;
+            transition: color 0.7s;
+        }
+        header a.active {
+            font-weight:bold;
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            text-align: center;
+            display:inline-block;
+            border-radius: 50%;
+            background: #4d5256;
+            color: #191919;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="demo1.html">1</a>
+        <a href="demo2.html">2</a>
+        <a href="demo3.html">3</a>
+        <a href="demo4.html">4</a>
+        <a href="demo5.html">5</a>
+        <a href="demo6.html">6</a>
+        <a href="demo7.html">7</a>
+        <a href="demo8.html">8</a>
+        <a class="active" href="demo9.html">9</a>
+    </header>
+    <div style="background:#F0F3F6;padding:50px 0;">
+        <!--start-->
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li><a class="ns-img" href="img/9/1.gif"></a></li>
+                    <li><a class="ns-img" href="img/9/2.gif"></a></li>
+                    <li><a class="ns-img" href="img/9/3.gif"></a></li>
+                    <li><a class="ns-img" href="img/9/4.gif"></a></li>
+                    <li>
+                        <div class="video">
+                            <iframe src="https://player.vimeo.com/video/145083718" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <a class="ns-img" href="img/9/5.gif"></a>
+                        <div class="video-playbutton-layer"></div>
+                    </li>
+                    <li>
+                        <div class="video">
+                            <video controls width="100%">
+                                <source src="img/mcvideo.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <a class="ns-img" href="img/9/6.gif"></a>
+                        <div class="video-playbutton-layer"></div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/9/7.gif"></a>
+                        <div class="video" style="background-color:transparent;height:auto;top:auto;bottom:30px;">
+                            <audio id="sound" data-autoplay="true" controls loop>
+                                <source src="img/mcaudio2.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                    </li>
+                    <li><a class="ns-img" href="img/9/8.gif"></a></li>
+                    <li>
+                        <a href="http://www.menucool.com/responsive-slider">
+                            <img class="ns-img" src="img/9/9.gif" style="cursor:pointer;" />
+                        </a>
+                    </li>
+                </ul>
+                <div id="current-slide-num" style="position:absolute;top:82px;right:20px;color:white;z-index:1;font-size:16px;"></div>
+            </div>
+        </div>
+        <!--end-->
+    </div>
+    <div style="max-width:700px;margin:40px auto;">
+        <h4>Visit <a href="http://www.menucool.com/slider/presentation-slideshow-for-website">Presentation Slideshow</a> to see how to set the following configurations:</h4>
+        <ul>
+            <li>Display the current slide number (as shown at the top right corner of the slider)</li>
+            <li>Force the slider pager to display slide index numbers rather than the current circle bullets</li>
+            <li>Loop the audio in the 7th slide and preset its starting volume</li>
+        </ul>
+    </div>
+    <script>
+        //set audio volume (0.0 - 1.0)
+        if (window.addEventListener)
+            window.addEventListener('load', function () { document.getElementById("sound").volume = 0.1; }, false);
+    </script>
+</body>
+</html>

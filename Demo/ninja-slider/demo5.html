@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="5/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <!--ninjaVideoPlugin.js is required only when the slider contains video or audio.-->
+    <script src="5/ninjaVideoPlugin.js"></script>
+    <script src="5/ninja-slider.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //don't copy the script below into your page.
+        if (!document.domain) alert("The video will not work properly if opening the page by local path. Please test this page through HTTP on a web or localhost server");    
+    </script>
+    <style>
+        body {font: normal 0.9em Arial;margin:0;}
+        a {color:#1155CC;}
+        ul li {padding: 10px 0;}
+        header {display:block;padding:60px 0 10px;background-color:#333; text-align:center;}
+        header a {
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 8px 13px 7px;
+            color: #555;
+            text-decoration:none;
+            transition: color 0.7s;
+        }
+        header a.active {
+            font-weight:bold;
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            text-align: center;
+            display:inline-block;
+            border-radius: 50%;
+            background: #4d5256;
+            color: #191919;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="demo1.html">1</a>
+        <a href="demo2.html">2</a>
+        <a href="demo3.html">3</a>
+        <a href="demo4.html">4</a>
+        <a class="active" href="demo5.html">5</a>
+        <a href="demo6.html">6</a>
+        <a href="demo7.html">7</a>
+        <a href="demo8.html">8</a>
+        <a href="demo9.html">9</a>
+    </header>
+    <!--start-->
+    <div id='ninja-slider'>
+        <div class="slider-inner">
+            <ul>
+                <li><a class="ns-img" href="img/1.jpg"></a></li>
+                <li>
+                    <div class="video">
+                        <iframe src="https://player.vimeo.com/video/93292237" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="ns-img" href="img/2.jpg"></a>
+                    <div class="caption">Supports Youtube, Vimeo and HTML video/audio</div>
+                    <div class="video-playbutton-layer"></div>
+                </li>
+                <li>
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/Bp119VFEjHE?enablejsapi=1&start=216&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1" frameborder="0" allowfullscreen data-autoplay="false"></iframe>
+                    </div>
+                    <a class="ns-img" href="img/3.jpg"></a>
+                    <div class="caption">This video starts from 3:36</div>
+                    <div class="video-playbutton-layer"></div>
+                </li>
+                <li>
+                    <div class="video">
+                        <video controls width="100%">
+                            <source src="img/mcvideo.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </li>
+                <li>
+                    <a class="ns-img" href="img/5.jpg"></a>
+                    <div class="video" style="background-color:transparent;height:auto;top:auto;bottom:0px;">
+                        <audio controls data-autoplay="1">
+                            <source src="img/mcaudio.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </li>
+            </ul>
+            <div class="fs-icon"></div>
+        </div>
+    </div>
+    <!--end-->
+    <div style="width:700px;margin:90px auto;">
+        <ul>
+            <li>
+                <h2>Video / Audio Suppport</h2>
+                <p>
+                    This demo contains YouTube, Vimeo, HTML video and HTML audio. Please visit <a href="http://www.menucool.com/slider/play-youtube-vimeo-html-video-or-audio-with-ninja-slider" title="Play Youtube, Vimeo, HTML video or audio with Ninja Slider">Support Youtube, Vimeo, HTML video or audio</a>
+                    for detailed instructions.
+                </p>        
+            </li>
+            <li>
+                <h2>Arrow Buttons</h2>
+                <p>The arrows will move inside the slider when the browser size is close to the slider width, and will disappear if continue shrinking the browser to a mobile size.</p>
+                <p>This can be easily configured by the media queries in the stylesheet. Please visit <a href="http://www.menucool.com/responsive-slider#custStyles">Hide nav buttons on mobile phones</a> for details.</p>
+                <p><i>Arrow Buttons are not needed for mobile phones as users can navigate by swipe or tap on the screen.</i></p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

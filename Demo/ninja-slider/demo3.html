@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
+    <link href="3/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="3/ninja-slider.js" type="text/javascript"></script>
+    <style>
+        body {font: normal 0.9em Arial;margin:0;}
+        #bg-asset {
+            position: fixed;
+            background: url('3/pg-bg.jpg') left 90px;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        a {color:#1155CC;}
+        h2 {margin-top: 60px;}
+        header {display:block;padding:40px 0 30px;text-align:center;background:#000;}
+        header a {
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 8px 13px 7px;
+            color: #4d5256;
+            text-decoration:none;
+            transition: color 0.7s;
+        }
+        header a.active {
+            font-weight:bold;
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            text-align: center;
+            display:inline-block;
+            border-radius: 50%;
+            background: #4d5256;
+            color: #191919;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="demo1.html">1</a>
+        <a href="demo2.html">2</a>
+        <a class="active" href="demo3.html">3</a>
+        <a href="demo4.html">4</a>
+        <a href="demo5.html">5</a>
+        <a href="demo6.html">6</a>
+        <a href="demo7.html">7</a>
+        <a href="demo8.html">8</a>
+        <a href="demo9.html">9</a>
+    </header>
+    <!--start-->
+    <div id="bg-asset"></div>
+    <div id="ninja-slider">
+        <div class="slider-inner">
+            <ul>
+                <li>
+                    <div class="content">
+                        <img src="3/meter.png" />
+                        <h3>Unrestricted Content</h3>
+                        <p>The content can be anything: HTML, text, images, ...</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content">
+                        <img src="3/bulb.png" />
+                        <h3>Showcase the important</h3>
+                        <p>
+                            Organize, highlight and showcase your most important content in a sleek and stylish manner.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content">
+                        <img src="3/responsive.png" />
+                        <h3>Responsive</h3>
+                        <p>The Content Slider is responsive. The image in this slide is always 30% of the screen size.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content">
+                        <img src="3/browser-support.png" />
+                        <h3>Mobile Friendly</h3>
+                        <p>The Carousel is compatible with mobile platforms like iphone/ipad.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="fs-icon" title="Expand/Close"></div>
+        </div>
+    </div>
+    <!--end-->
+    <div style="max-width:700px;margin:0 auto 90px;background:#EEE;padding:80px;">
+        <h1>Content Slider</h1>
+        <p>&nbsp;</p>
+        <p>
+            Full documentation: visit <a href="http://www.menucool.com/slider/content-slider">Content Slider</a>.
+        </p>
+        <p>&nbsp;</p>
+        <p>Ninja Slider is not restricted to showcase images. As the demo on the top shows, the Ninja Slider can rotate any HTML content.</p>
+        <p>When the Ninja Slider is used as a Content Slider, it remains to be responsive and touch device friendly.</p>
+        <h2>Rotating any HTML content</h2>
+        <p>Every &lt;li&gt; element in the Ninja Slider markup will be treated as a slide. It can contain any HTML content, even no slide image at all.</p>
+
+        <h2>Responsive</h2>
+        <p>Shrink the screen, or view this page with a mobile phone, the slider will always adapt to the browser size.</p>
+        <p>From the stylesheet of this content slider, you will see the following code which shows another way to define responsive and scalable images:</p>
+        <code style="display:block;">
+            #ninja-slider div.content img {
+            width:30%;
+            }
+        </code>
+        <h2>Touch-friendly</h2>
+        <p>View this content slideshow with mobiles or touch-enabled devices, and you will find the slider is navigable by touch or swipe.</p>
+    </div>
+    <p>&nbsp;</p>
+</body>
+</html>

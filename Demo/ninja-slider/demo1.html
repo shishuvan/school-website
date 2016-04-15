@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="1/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="1/ninja-slider.js" type="text/javascript"></script>
+    <style>
+        body {font: normal 0.9em Arial;margin:0;}
+        a {color:#1155CC;}
+        ul li {padding: 10px 0;}
+        header {display:block;padding:60px 0 10px;background-color:#191919;text-align:center;}
+        header a {
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 8px 13px 7px;
+            color: #4d5256;
+            text-decoration:none;
+            transition: color 0.7s;
+        }
+        header a.active {
+            font-weight:bold;
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            text-align: center;
+            display:inline-block;
+            border-radius: 50%;
+            background: #4d5256;
+            color: #191919;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="active" href="demo1.html">1</a>
+        <a href="demo2.html">2</a>
+        <a href="demo3.html">3</a>
+        <a href="demo4.html">4</a>
+        <a href="demo5.html">5</a>
+        <a href="demo6.html">6</a>
+        <a href="demo7.html">7</a>
+        <a href="demo8.html">8</a>
+        <a href="demo9.html">9</a>
+    </header>
+    <!--start-->
+    <div id="ninja-slider">
+        <div class="slider-inner">
+            <ul>
+                <li>
+                    <a class="ns-img" href="img/a.jpg"></a>
+                    <div class="caption">@colerise</div>
+                </li>
+                <li><a class="ns-img" href="img/b.jpg"></a>
+                    <div class="caption">@colerise</div>
+                </li>
+                <li>
+                    <a href="/"><img class="ns-img" src="img/c.jpg" style="cursor:pointer;" /></a>
+                    <div class="caption">@colerise</div>
+                </li>
+                <li>
+                    <a class="ns-img" href="img/d.jpg"></a>
+                    <div class="caption cap1">RESPONSIVE</div>
+                    <div class="caption cap1 cap2">TOUCH·FRIENDLY</div>
+                    <div class="caption">@colerise</div>
+                </li>
+            </ul>
+            <div class="fs-icon" title="Expand/Close"></div>
+        </div>
+    </div>
+    <!--end-->
+    <div style="max-width:700px;margin:90px auto;">
+        <ul>
+            <li>
+                <h3>If you want to make the slider 100% full-width?</h3>
+                <p>
+                    Just remove the <em>max-width</em> setting in <em>ninja-slider.css</em>, e.g.<br />
+                    <code>#ninja-slider div.slider-inner { <del>max-width:700px;</del> }</code>
+                </p>
+            </li>
+            <li>
+                <h3>Responsive</h3>
+                <p>Shrink the screen, or view this page with a mobile phone, the slider will always adapt to the browser size.</p>
+            </li>
+            <li><h3>Library agnostic</h3><p>jQuery is not required</p></li>
+            <li>
+                <h3>Touch-friendly</h3>
+                <p>View Ninja Slider with mobiles or touch-enabled devices, the slider is navigable by touch or swipe.</p>
+            </li>
+            <li>
+                <h3>Any HTML content</h3>
+                <p>Every <code>&lt;li&gt;</code> element will be treated as a slide. It can contain any HTML content, even no slide image at all.</p>
+            </li>
+            <li>
+                <h3>Transitional Effect for Captions</h3>
+                <p>The transitional effect of the captions can be easily configured by the <code>transition</code> or the <code>animation</code> property in the stylesheet.</p>
+            </li>
+        </ul>
+        <p>
+            For the full documentation please visit <a href="http://www.menucool.com/responsive-slider" title="Ninja Slider: responsive, touch-friendly">Ninja Slider</a>.
+        </p>
+    </div>
+</body>
+</html>

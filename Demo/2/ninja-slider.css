@@ -1,0 +1,215 @@
+/* Visit http://www.menucool.com/responsive-slider for instructions */
+
+
+#ninja-slider {
+    width:100%;
+    background:#FFF;
+    padding: 0!important;
+
+    margin:0 auto;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+#ninja-slider .slider-inner {
+    /*max-width:720px;*/
+    margin:0 auto;/*center-aligned */
+    font-size:0px;
+    position:relative;
+    box-sizing:border-box;
+}
+
+#ninja-slider ul {
+    position:relative;
+    list-style:none;
+    padding:0;
+    box-sizing:border-box;
+    background:black;
+}
+
+#ninja-slider li {    
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    opacity:0;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+#ninja-slider li::after {
+    content:"";
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:transparent url(pattern.png) repeat 0 0;
+    top:0;left:0;
+}
+
+
+#ninja-slider li.ns-show {
+    opacity:1;
+}
+
+
+/* --------- slider image ------- */  
+#ninja-slider .ns-img {
+    background-color:rgba(0,0,0,0.8);
+    background-size:contain;/*Note: If transitionType is zoom, it will be overridden to cover.*/
+
+    /*box-shadow: 0 1px 5px rgba(0,0,0,.8),inset 0 0 2px rgba(255,255,255,.4);*/
+    border-radius:4px;
+
+    cursor:default;
+    display:block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+
+/*---------- Captions -------------------*/
+
+#ninja-slider .caption {
+    font-size:10em;
+    font-family: 'Bree Serif', sans-serif;
+    position:absolute;
+    width:100%;
+    text-align:center;
+    color:rgba(255,255,255,0.8);
+    bottom:20%;
+}
+#ninja-slider li[class*='-s'] .caption {
+    /* 5s = (delay + transitionSpeed) set in the ninja-slider.js */
+    -webkit-animation: titleAnimation 5s linear both;
+    animation: titleAnimation 5s linear both;
+}
+
+@keyframes titleAnimation { 
+	0% { opacity:0; }
+	10% { opacity:0;transform: translateY(-20%);}
+	20% { opacity:1;transform: translateY(0%);}
+	70% {opacity:1;transform: translateY(0%);}
+	80% {opacity:0;transform: translateY(100%);}
+	100% {opacity:0;transform: translateY(100%);}
+}
+
+@-webkit-keyframes titleAnimation { 
+	0% { opacity:0; }
+	10% { opacity:0; -webkit-transform:translateY(-20%);}
+	25% { opacity:1; -webkit-transform:translateY(0%);}
+	70% {opacity:1; -webkit-transform:translateY(0%);}
+	80% {opacity:0; -webkit-transform:translateY(100%);}
+	100% {opacity:0; -webkit-transform:translateY(100%);}
+}
+
+/* ---------Arrow buttons ------- */   
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */ 
+/* Usually the ninja-slider.js will create the arrow buttons and pager(nav dots) automatically, unless you have added their markup manually to the HTML as this demo did.
+   This demo has put them inside a DIV.navWrapper. 
+*/  
+
+div.navsWrapper {
+    position:absolute;
+    height:52px;
+    right:90px;
+    bottom:9%;
+    z-index:10;
+}
+ 
+#ninja-slider-prev, #ninja-slider-next
+{
+    position: absolute;
+    display:inline-block;
+    width:52px;
+    height:52px;
+    line-height:52px;
+    margin:0;
+    border:2px solid white;
+    backface-visibility:hidden;
+    color:white;
+    overflow:hidden;
+    -webkit-user-select: none;
+    user-select:none;
+    font-family:sans-serif;
+    font-size:14px;
+    transition:all 0.5s;
+    cursor:pointer;
+}
+
+#ninja-slider-prev {
+    left:auto; right:-1px;
+}
+
+#ninja-slider-next {
+    left:-1px; right:auto;
+}
+
+#ninja-slider-prev:hover, #ninja-slider-next:hover {width:80px;background-color:rgba(0,0,0,0.6);}
+
+/*pagination within the prev/next buttons*/
+#ninja-slider-prev div {margin-right:41px;white-space:nowrap;float:right;opacity:0;}
+#ninja-slider-next div {margin-left:41px;white-space:nowrap;opacity:0;}
+#ninja-slider-prev:hover div, #ninja-slider-next:hover div {opacity:1;}
+
+/* arrows */
+#ninja-slider-prev::before, #ninja-slider-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+    backface-visibility:hidden;
+}
+
+#ninja-slider-prev::before {
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    right:15px;
+}
+
+#ninja-slider-next::before {
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    left:15px;
+}
+
+
+/*------ pager(nav bullets) ------*/      
+/* The pager id should be: slider id + "-pager" */
+#ninja-slider-pager, #ninja-slider-pause-play { display:none;} 
+
+
+/*Responsive settings*/
+@media only screen and (max-width:500px){
+
+    #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pager {
+        display:none;
+    }
+}
+
+@media only screen and (max-width:1100px){    
+    #ninja-slider .caption {
+        font-size:7em;
+    }
+}
+
+@media only screen and (max-width:700px){    
+    #ninja-slider .caption {
+        font-size:3em;
+    }
+}
+

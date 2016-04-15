@@ -3,7 +3,7 @@ http://www.freshdesignweb.com/fashion-responsive-slider-tutorial.html
 */
 /* Slider
 /*-----------------------------------------------------------------------------------*/
-.slider_container{ width:920px; margin:auto; clear:both; background:url(images/shadow_top.png) no-repeat top center; padding:30px 0 0 0;}
+.slider_container{ width:1000px; margin:auto; clear:both; no-repeat top center; padding:51px 0 0 0;}
 .flex-caption{ position: absolute; right:11px; bottom:20px;}
 .caption_title_line{ width:450px; height:75px; padding:5px 15px 10px 15px;background:url(images/slider_caption_bg.png) repeat;color: #303030;}
 .flex-caption h2{ color:#303030;font-size:20px; padding:5px 0 5px 0; margin:0px;font-family: 'Ovo', serif;}
@@ -12,16 +12,16 @@ http://www.freshdesignweb.com/fashion-responsive-slider-tutorial.html
 .flexslider a:active {outline: none;}
 .slides,
 .flex-control-nav,
-.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
 
 /* FlexSlider Necessary Styles
-*********************************/ 
-.flexslider {width: 100%; margin: 0; padding: 0 0 30px 0;background:url(images/shadow_bottom.png) no-repeat center bottom;}
+*********************************/
+.flexslider {width: 100%; margin: 0; padding: 0 0 30px 0; no-repeat center bottom;}
 .flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {max-width: 100%; display: block; border:10px #ededed solid;}
 .flex-pauseplay span {text-transform: capitalize;}
-.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
-html[xmlns] .slides {display: block;} 
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
 * html .slides {height: 1%;}
 .no-js .slides > li:first-child {display: block;}
 .flexslider {position: relative; zoom: 1;}

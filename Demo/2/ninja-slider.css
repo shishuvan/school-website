@@ -27,7 +27,7 @@
     background:black;
 }
 
-#ninja-slider li {    
+#ninja-slider li {
     width:100%;
     height:100%;
     top:0;
@@ -58,7 +58,7 @@
 }
 
 
-/* --------- slider image ------- */  
+/* --------- slider image ------- */
 #ninja-slider .ns-img {
     background-color:rgba(0,0,0,0.8);
     background-size:contain;/*Note: If transitionType is zoom, it will be overridden to cover.*/
@@ -93,7 +93,7 @@
     animation: titleAnimation 5s linear both;
 }
 
-@keyframes titleAnimation { 
+@keyframes titleAnimation {
 	0% { opacity:0; }
 	10% { opacity:0;transform: translateY(-20%);}
 	20% { opacity:1;transform: translateY(0%);}
@@ -102,7 +102,7 @@
 	100% {opacity:0;transform: translateY(100%);}
 }
 
-@-webkit-keyframes titleAnimation { 
+@-webkit-keyframes titleAnimation {
 	0% { opacity:0; }
 	10% { opacity:0; -webkit-transform:translateY(-20%);}
 	25% { opacity:1; -webkit-transform:translateY(0%);}
@@ -111,11 +111,11 @@
 	100% {opacity:0; -webkit-transform:translateY(100%);}
 }
 
-/* ---------Arrow buttons ------- */   
-/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */ 
+/* ---------Arrow buttons ------- */
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */
 /* Usually the ninja-slider.js will create the arrow buttons and pager(nav dots) automatically, unless you have added their markup manually to the HTML as this demo did.
-   This demo has put them inside a DIV.navWrapper. 
-*/  
+   This demo has put them inside a DIV.navWrapper.
+*/
 
 div.navsWrapper {
     position:absolute;
@@ -124,7 +124,7 @@ div.navsWrapper {
     bottom:9%;
     z-index:10;
 }
- 
+
 #ninja-slider-prev, #ninja-slider-next
 {
     position: absolute;
@@ -188,9 +188,9 @@ div.navsWrapper {
 }
 
 
-/*------ pager(nav bullets) ------*/      
+/*------ pager(nav bullets) ------*/
 /* The pager id should be: slider id + "-pager" */
-#ninja-slider-pager, #ninja-slider-pause-play { display:none;} 
+#ninja-slider-pager, #ninja-slider-pause-play { display:none;}
 
 
 /*Responsive settings*/
@@ -201,15 +201,14 @@ div.navsWrapper {
     }
 }
 
-@media only screen and (max-width:1100px){    
+@media only screen and (max-width:1100px){
     #ninja-slider .caption {
         font-size:7em;
     }
 }
 
-@media only screen and (max-width:700px){    
+@media only screen and (max-width:700px){
     #ninja-slider .caption {
         font-size:3em;
     }
 }
-

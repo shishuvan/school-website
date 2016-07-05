@@ -1,14 +1,42 @@
+body {
+	line-height: 1.9;
+	font-family: "Roboto Slab";
+}
+
+a {
+    color: #417505;
+}
+
 .container {
 	max-width: 720px;
 }
 
 .navigation {
-	height: 30px;
+	display: block;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #C6CDC2;
+    margin: 10px 0px;
+    margin-bottom: 50px;
+}
+
+.navigation:after {
+	clear: both;
+}
+
+.navigation .brand {
+	float: left;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.navigation ul {
+	margin: none;
+	padding: none;
 }
 
 .navigation li {
 	display: inline-block;
 	float: right;
-	margin: 5px 15px;
+	margin-left: 30px;
 	list-style: none;
 }

@@ -23,6 +23,11 @@ footer {
 .footer-img {
     position: relative;
     display: inline-block;
+	height: 380px;
+	width: 100%;
+	background-image: url(/images/footer.png);
+	background-size: cover;
+	background-position: center;
 }
 
 .footer-img:after {
@@ -32,8 +37,9 @@ footer {
   width: 100%;
   height: 100%;
   top: 0;
-  background: -webkit-linear-gradient(#FFF, transparent) left repeat;
-  background: linear-gradient(#FFF, transparent) left repeat;
+  background: none;
+  background: -webkit-linear-gradient(#FFF, rgba(255,255,255,0.001)) left repeat;
+  background: linear-gradient(#FFF, rgba(255,255,255,0.001)) left repeat;
 }
 
 .container {

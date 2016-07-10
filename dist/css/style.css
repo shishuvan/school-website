@@ -7,6 +7,35 @@ a {
     color: #417505;
 }
 
+img.responsive {
+	max-width: 100%;
+	display: block;
+	margin: 30px 0px;
+}
+
+footer {
+    /*border-top: 1px solid #C6CDC2;*/
+	padding-top: 160px;
+	margin: 0px;
+	text-align: center;
+}
+
+.footer-img {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-img:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: -webkit-linear-gradient(#FFF, transparent) left repeat;
+  background: linear-gradient(#FFF, transparent) left repeat;
+}
+
 .container {
 	max-width: 720px;
 }
@@ -27,6 +56,31 @@ a {
 	float: left;
 	font-weight: bold;
 	font-size: 1.2em;
+}
+
+@media(max-width: 767px) {
+	.navigation {
+		padding-bottom: 0px;
+	}
+
+	.navigation .brand	{
+		float: none;
+		display: block;
+		text-align: center;
+		padding-bottom: 0px;
+	}
+
+	.navigation ul {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.navigation ul li {
+		display: inline-block;
+		float: none;
+		margin-left: 20px;
+		font-size: 12px;
+	}
 }
 
 .navigation ul {
